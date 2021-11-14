@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <title>Organizing</title>
+  </head>
+
+  <body>
+    <div class="loader"></div>
+    <div class="collect-parts">
+      <header class="row">
+        <div class="head col-6 col-md-4">
+          <div class="home">Home</div>
+          <div class="about-us">About Us</div>
+        </div>
+      </header>
+
+      <section class="row explain">
+        <div class="col-8 col-md-6">
+          <div class="welcome">
+            <h1>Welcome !</h1>
+          </div>
+          <div class="usage">
+            <p>Use this table to organize your cabinet</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="row cat-table">
+        <div class="main-table col-8 col-md-6">
+          <table class="table" id="organizer">
+            <thead>
+              <tr>
+                <th scope="col">
+                  Not been used <br /><button onclick="openModel('notUsed')">
+                    + Item
+                  </button>
+                </th>
+                <th scope="col">
+                  Bad Statue <br /><button onclick="openModel('bad')">+ Item
+                </th>
+                <th scope="col">
+                  Good Statue <br /><button onclick="openModel('good')">+ Item
+                </th>
+                <th scope="col">Category</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="workware">
+                <td>
+                  <div class="notUsed"></div>
+                </td>
+                <td >
+                  <div class="bad"></div>
+                </td>
+                <td >
+                  <div class="good"></div>
+                </td>
+                <td>Workware</td>
+              </tr>
+              <tr id="home">
+                <td>
+                  <div class="notUsed"></div>
+                </td>
+                <td >
+                  <div class="bad"></div>
+                </td>
+                <td >
+                  <div class="good"></div>
+                </td>
+                <td>Home</td>
+              </tr>
+              <tr id="sport">
+                <td>
+                  <div class="notUsed"></div>
+                </td>
+                <td >
+                  <div class="bad"></div>
+                </td>
+                <td >
+                  <div class="good"></div>
+                </td>
+                <td>Sport</td>
+              </tr>
+              <tr id="partyware">
+                <td>
+                  <div class="notUsed"></div>
+                </td>
+                <td >
+                  <div class="bad"></div>
+                </td>
+                <td >
+                  <div class="good"></div>
+                </td>
+                <td>Partyware</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="row export-pdf">
+        <div class="col-8 col-md-6">
+          <button type="button" onclick="downloadPdf()">Export as PDF</button>
+        </div>
+      </section>
+
+      <div id="modal-wrapper"></div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.10/jspdf.plugin.autotable.min.js"></script>
+    <script src="./js/tableHTMLExport.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
