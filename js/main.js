@@ -1,6 +1,8 @@
 $(".loader").fadeOut("slow");
-function openModel(type) {
+
+function openModel(type,e) {
   document.getElementById("modal-wrapper").innerHTML += getModal(type);
+  $("#clothName").focus()
 }
 
 function closeModal() {
@@ -22,12 +24,14 @@ function addItem(type, event) {
   document.getElementById("modal-wrapper").innerHTML = "";
 }
 
+
+
 function downloadPdf() {
   $("#organizer").tableHTMLExport({ type: "pdf", filename: "organizer.pdf" });
 }
 
 function getModal(type) {
-  return `<div class="custom-model-main model-open">
+  return `<div id="custom-model-main" class="custom-model-main model-open">
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-8">
@@ -44,24 +48,25 @@ function getModal(type) {
                   <div class="mb-3 row">
                     <label
                       for="staticEmail"
-                      class="col-3 col-form-label"
+                      class="col-4 col-form-label"
                       >Clothe Name:</label
                     >
-                    <div class="col-8">
+                    <div class="col-7">
                       <input
                         id="clothName"
                         type="text"
                         class="form-control"
+                        autofocus
                       />
                     </div>
                   </div>
                   <div class="mb-3 row">
                     <label
                       for="inputPassword"
-                      class="col-3 col-form-label"
+                      class="col-4 col-form-label"
                       >Clothe Color:</label
                     >
-                    <div class="col-8">
+                    <div class="col-7">
                       <input
                         id="clothColor"
                         type="text"
@@ -71,10 +76,10 @@ function getModal(type) {
                   </div>
                   <div class="mb-3 row">
                     <label
-                      class="col-3 col-form-label"
+                      class="col-4 col-form-label"
                       >Cloth type:</label
                     >
-                    <div class="col-8">
+                    <div class="col-7">
                       <select
                         id="clothType"
                         class="form-control"
@@ -102,6 +107,6 @@ function getModal(type) {
     </div>
   </div>
 </div>
-<div class="bg-overlay"></div>
+<div class="bg-overlay"  onclick="closeModal()"></div>
 </div>`;
 }

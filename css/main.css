@@ -5,15 +5,18 @@
   font-family: cursive;
   font-weight: bold;
 }
+
 body {
   font-size: 26px !important;
 }
+
 .collect-parts {
   /* width: 50vw; */
   /* height: 100vh; */
   margin: 0 auto;
   letter-spacing: -1px;
 }
+
 .loader {
   position: fixed;
   left: 0px;
@@ -21,7 +24,7 @@ body {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url(../img/Preloader_2.gif) 50% 50% no-repeat rgb(255,255,255);
+  background: url(../img/Preloader_2.gif) 50% 50% no-repeat rgb(255, 255, 255);
 }
 
 /* Start Header Part  */
@@ -44,6 +47,7 @@ header .head {
   /* width: 55%; */
   /* font-size: 35px; */
 }
+
 /* End Header Part  */
 
 /* Start Welcom! Part  */
@@ -67,6 +71,7 @@ header .head {
   letter-spacing: -1px;
   text-align: center;
 }
+
 /* End Welcom! Part  */
 
 /* Start Table Part  */
@@ -122,6 +127,7 @@ header .head {
 .cat-table .table tbody {
   color: #e2761a;
 }
+
 .cat-table th button {
   color: #468541;
   background-color: #fff;
@@ -148,6 +154,7 @@ header .head {
   border-color: #468541;
   outline: none;
 }
+
 /* End Table Part  */
 
 /* Start PDF Button */
@@ -155,9 +162,9 @@ header .head {
   justify-content: center;
 }
 
-.export-pdf button {
+.export-pdf  .export-pdf-button {
   margin: 2vw;
-  background-color: transparent;
+  /* background-color: transparent; */
   padding: 12px;
   font-size: 14px !important;
   border-radius: 10px;
@@ -166,6 +173,7 @@ header .head {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
+
 /* Start PDF Button */
 
 /* -------- Start Popup ------  */
@@ -176,7 +184,8 @@ header .head {
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; /* z-index: 1050; */
+  left: 0;
+  /* z-index: 1050; */
   -webkit-overflow-scrolling: touch;
   outline: 0;
   opacity: 0;
