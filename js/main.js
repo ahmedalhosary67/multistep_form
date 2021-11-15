@@ -1,6 +1,6 @@
 $(".loader").fadeOut("slow");
 
-function openModel(type,e) {
+function openModel(type, e) {
   document.getElementById("modal-wrapper").innerHTML += getModal(type);
   $("#clothName").focus()
 }
@@ -24,10 +24,36 @@ function addItem(type, event) {
   document.getElementById("modal-wrapper").innerHTML = "";
 }
 
-
+// Define the function 
+// to screenshot the div
+function takeshot() {
+  let div =
+    document.getElementById('organizer');
+  // Use the html2canvas
+  // function to take a screenshot
+  // and append it
+  // to the output div
+  $('#output').children().remove();
+  setTimeout(() => {
+    if ($('#output').parent().parent().parent().hasClass("show")) {
+      html2canvas(div).then(
+        function (canvas) {
+          document
+            .getElementById('output')
+            .appendChild(canvas);
+        })
+    }
+  }, 200);
+}
 
 function downloadPdf() {
-  $("#organizer").tableHTMLExport({ type: "pdf", filename: "organizer.pdf" });
+  var canvas = document.querySelector("canvas");
+  image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+  var link = document.createElement('a');
+  link.download = "my-image.png";
+  link.href = image;
+  link.click();
+  // $("#organizer").tableHTMLExport({ type: "pdf", filename: "organizer.pdf" });
 }
 
 function getModal(type) {
