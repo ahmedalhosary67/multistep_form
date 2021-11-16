@@ -1,8 +1,14 @@
-$(".loader").fadeOut("slow");
+setTimeout(() => {
+  $("#loader").fadeOut("slow"); 
+  
+}, 2000);
+// $(this).on("keydown click", () => {
+//   $("#loader").fadeOut("slow"); 
+// });
 
 function openModel(type, e) {
   document.getElementById("modal-wrapper").innerHTML += getModal(type);
-  $("#clothName").focus()
+  $("#clothName").focus();
 }
 
 function closeModal() {
@@ -19,37 +25,44 @@ function addItem(type, event) {
   const targetCategory = document.getElementById(clothType.value);
   const table = targetCategory.getElementsByClassName(type)[0];
 
-  table.innerHTML += `<span class="task-box">${clothName.value} _ ${clothColor.value}</span><br />`;
+  clothName.nextSibling.remove();
+
+  if (clothName.value == "" || clothColor.value == "") {
+    clothName.parentNode.innerHTML += `<span class="text text-danger" style="position: absolute;top:0;font-size:20px">please insert name</span>`;
+    return;
+  }
+
+  table.innerHTML += `<span class="task-box">${
+    clothName.value == "" ? "Undefind" : clothName.value
+  } _ ${clothColor.value == "" ? "Undefind" : clothColor.value}</span><br />`;
 
   document.getElementById("modal-wrapper").innerHTML = "";
 }
 
-// Define the function 
+// Define the function
 // to screenshot the div
 function takeshot() {
-  let div =
-    document.getElementById('organizer');
+  let div = document.getElementById("organizer");
   // Use the html2canvas
   // function to take a screenshot
   // and append it
   // to the output div
-  $('#output').children().remove();
+  $("#output").children().remove();
   setTimeout(() => {
-    if ($('#output').parent().parent().parent().hasClass("show")) {
-      html2canvas(div).then(
-        function (canvas) {
-          document
-            .getElementById('output')
-            .appendChild(canvas);
-        })
+    if ($("#output").parent().parent().parent().hasClass("show")) {
+      html2canvas(div).then(function (canvas) {
+        document.getElementById("output").appendChild(canvas);
+      });
     }
   }, 200);
 }
 
 function downloadPdf() {
   var canvas = document.querySelector("canvas");
-  image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-  var link = document.createElement('a');
+  image = canvas
+    .toDataURL("image/png")
+    .replace("image/png", "image/octet-stream");
+  var link = document.createElement("a");
   link.download = "my-image.png";
   link.href = image;
   link.click();

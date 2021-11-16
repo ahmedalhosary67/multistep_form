@@ -11,28 +11,23 @@
 </head>
 
 <body>
-  <div class="loader"></div>
-  <div class="collect-parts">
-    <header class="row">
-      <div class="head col-6 col-md-4">
-        <div class="home">Home</div>
-        <div class="about-us">About Us</div>
-      </div>
+  <div class="collect-parts col-12 col-sm-8 col-lg-5">
+    <header class="head">
+      <div class="home">Home</div>
+      <div class="about-us">About Us</div>
     </header>
+    <div id="loader"></div>
 
-    <section class="row explain">
-      <div class="col-8 col-md-6">
+    <section class="explain">
         <div class="welcome">
           <h1>Welcome !</h1>
         </div>
         <div class="usage">
           <p>Use this table to organize your cabinet</p>
         </div>
-      </div>
     </section>
 
-    <section class="row cat-table">
-      <div class="main-table col-8 col-md-6">
+    <section class="cat-table">
         <table class="table" id="organizer">
           <thead>
             <tr>
@@ -47,7 +42,7 @@
               <th scope="col">
                 Good Statue <br><button class="btn btn-success" onclick="openModel('good')">+ Item
               </th>
-              <th scope="col">Category</th>
+              <th style="vertical-align: middle;" scope="col">Category</th>
             </tr>
           </thead>
           <tbody>
@@ -101,14 +96,11 @@
             </tr>
           </tbody>
         </table>
-      </div>
     </section>
 
-    <section class="row export-pdf">
-      <div class="col-8 col-md-6">
+    <section class="export-pdf">
         <button class="export-pdf-button btn btn-success" type="button" data-toggle="modal"
           data-target="#exampleModal" onclick="takeshot()">Export as PDF</button>
-      </div>
     </section>
 
     <div id="modal-wrapper"></div>
