@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="collect-parts col-12 col-sm-10 col-lg-8">
+  <div class="collect-parts col-12 col-sm-10 col-lg-8 col-xl-6">
     <header class="head">
       <img class="iphone_remove" src="./image/21691885-c027-4968-8e87-4bc911e05ee1.jpg" style="position: absolute;left: 0;top: 0;width: 100px;" />
       <div class="home">Home</div>
@@ -105,8 +105,7 @@
 
     <section class="export-pdf">
       <button class="export-pdf-button btn" type="button" data-toggle="modal" data-target="#exampleModal"
-        onclick="takeshot()" style="color: #e2761a;
-          border-color: #e2761a;">Export as PDF</button>
+        onclick="takeshot()">Export as PDF</button>
     </section>
 
     <div id="modal-wrapper"></div>
@@ -125,8 +124,8 @@
 
           </div>
           <div class="modal-footer export-pdf">
-            <button type="button" class="export-pdf-button btn btn-danger btn-lg" data-dismiss="modal">Close</button>
-            <button type="button" id="export" class="export-pdf-button btn btn-success btn-lg" data-toggle="modal"
+            <button type="button" class=" btn btn-danger btn-lg" data-dismiss="modal">Close</button>
+            <button type="button" id="export" class=" btn btn-success btn-lg" data-toggle="modal"
               data-target="#exampleModal1" data-dismiss="modal" onclick="downloadPdf()">ُExport</button>
           </div>
         </div>

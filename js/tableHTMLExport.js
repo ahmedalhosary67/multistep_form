@@ -31,7 +31,7 @@ THE SOFTWARE.*/
                 separator: ',',
                 newline: '\r\n',
                 ignoreColumns: '',
-                ignoreRows: '',
+                ignoreRows: '+ Item',
                 type:'csv',
                 htmlContent: false,
                 consoleLog: false,
@@ -54,6 +54,7 @@ THE SOFTWARE.*/
                 if(defaults.htmlContent){
                     content_data = data.html().trim();
                 }else{
+                    content_data = data.text().trim();
                     content_data = data.text().trim();
                 }
                 return content_data;

@@ -1,9 +1,14 @@
+@font-face {
+    font-family: Aladin;
+    src: url(../webfonts/Aladin-Regular.ttf);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: cursive;
-    font-weight: bold;
+    font-family: Aladin;
+    /* font-weight: bold; */
 }
 
 body {
@@ -14,7 +19,7 @@ body {
     /* width: 50vw; */
     /* height: 100vh; */
     margin: 0 auto;
-    letter-spacing: -1px;
+    /* letter-spacing: -1px; */
     position: relative;
 }
 
@@ -42,7 +47,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     /* background-position: 0% 40%; */
-    font-size: 28px;
+    font-size: 1.7rem;
 }
 
 
@@ -61,8 +66,8 @@ header {
 }
 
 .explain .usage {
-    font-size: 30px;
-    letter-spacing: -1px;
+    font-size: 1.7rem;
+    /* letter-spacing: -1px; */
 }
 
 
@@ -99,17 +104,17 @@ canvas {
 
 .cat-table table th,
 .cat-table table td:last-of-type {
-    padding: 15px 0 !important;
+    /* padding: 15px 0 !important; */
 }
 
 .cat-table table thead {
-    padding: 20px 0;
+    /* padding: 20px 0; */
 }
 
 .cat-table table th,
 .cat-table table td {
-    padding: 10px 0;
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
 .cat-table table thead tr {
@@ -129,9 +134,9 @@ input:invalid {
     color: #468541;
     background-color: #fff;
     border: 2px solid #468541;
-    padding: 3px 6px 7px;
+    padding: 0px 5px;
     border-radius: 6px;
-    font-size: 16px;
+    font-size: 1.1rem;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
@@ -166,6 +171,8 @@ input:invalid {
     margin: 2vw;
     /* background-color: transparent; */
     padding: 12px;
+    color: #e2761a;
+    border-color: #e2761a;
     /* font-size: 14px !important; */
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -173,7 +180,10 @@ input:invalid {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-
+.export-pdf .export-pdf-button:hover{
+    color: #fff;
+    background-color: #e2761a;
+}
 
 /* Start PDF Button */
 
@@ -293,7 +303,7 @@ input:invalid {
     font-size: 50px;
     color: #000;
     text-align: end;
-    font-weight: 100;
+    /* font-weight: 100; */
 }
 
 .items {
@@ -327,7 +337,7 @@ input:invalid {
 
 
 @media screen 
-  and (max-device-width: 480px)  { 
+  and (max-device-width: 667px)  { 
     .iphone_remove{
         display: none;
     }

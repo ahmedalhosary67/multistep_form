@@ -5,7 +5,8 @@
 $(this).on("keydown click", () => {
   $("#loader").fadeOut("slow");
   $(".welcome").addClass("animate__animated animate__fadeInDownBig");
-  // $(".cat-table").addClass("animate__animated animate__zoomIn");
+  $("table button").addClass("animate__animated animate__zoomIn");
+  $("header img").addClass("animate__animated animate__zoomIn");
   $("section .export-pdf-button").addClass("animate__animated animate__fadeInLeftBig");
 });
 
