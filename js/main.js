@@ -164,21 +164,4 @@ function getModal(type) {
 
 
 
-// tablescrollWidth
 
-
-
-$(window).on("load resize ", function() {
-  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-  $('.tbl-header').css({'padding-right':scrollWidth});
-}).resize();
-
-
-// bg wrapper animation
-
-$("#login-button").click(function(event){
-  event.preventDefault();
-
-$('form').fadeOut(500);
-$('.wrapper').addClass('form-success');
-});

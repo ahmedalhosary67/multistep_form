@@ -26,7 +26,7 @@ body {
 #loader {
     position: absolute;
     left: 0px;
-    top: 0vh;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 9999;
@@ -54,17 +54,6 @@ header {
 /* End Header Part  */
 
 
-
-/* Start big_section Part  */
-.big_section{
-    /* background: url(../image/bg2.svg) 50% 20% no-repeat; */
-}
-/* End big_section Part  */
-
-
-
-
-
 /* Start Welcom! Part  */
 
 .explain {
@@ -85,23 +74,17 @@ header {
 /* End Welcom! Part  */
 
 
-
-
 /* Start Table Part  */
 
 .cat-table #table-container {
     border: 3px solid #000;
     border-radius: 20px;
-
-
-
 }
 
 .cat-table table {
     vertical-align: middle;
     text-align: center;
     margin: 0 auto;
-
 }
 
 .cat-table table th {
@@ -126,13 +109,17 @@ input:invalid {
 }
 
 .cat-table table tbody td {
-    color: #e2761a;
+    color: blue;
 }
 
 .cat-table th button {
-    color: #468541;
+
+
+    color: #000;
     background-color: #fff;
-    border: 2px solid #468541;
+    border: 2px solid #8cb8e5;
+
+
     padding: 0px 5px;
     border-radius: 6px;
     font-size: 1.1rem;
@@ -143,20 +130,27 @@ input:invalid {
 }
 
 .cat-table th button:active {
-    border-color: #468541;
+    border-color:  #8cb8e5;
 }
 
 .cat-table th button:focus {
-    border-color: #468541;
+    border-color:  #8cb8e5;
     outline: none;
 }
 
 .cat-table th button:focus-visible {
-    border-color: #468541;
+    border-color:  #8cb8e5;
     outline: none;
 }
 
 
+.btn-success:hover {
+    color: #fff;
+    background-color: #faac1d;
+    border-color: #faac1d;
+
+
+}
 /* End Table Part  */
 
 
@@ -168,22 +162,27 @@ input:invalid {
 
 .export-pdf .export-pdf-button {
     margin: 2vw;
-    /* background-color: transparent; */
-    padding: 12px;
-    color: black;
-    border-color: #25c481;
-    /* font-size: 14px !important; */
+    padding: 6px 6px 0;
+    color: #b01414;
+    /* border-color: #8cb7e5; */
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    font-size: 22px;
+
 }
 
 .export-pdf .export-pdf-button:hover {
-    color: #fff;
-    background: linear-gradient(to right, #25c481, #25b7c4) !important;
-}
+     color: #fff;
+
+    background-color: #b01414;
+    /* background: linear-gradient(to bottom right, #8cb7e5 0%, #b2edd4 100%); */
+
+} 
+
+
 
 
 /* Start PDF Button */
@@ -343,31 +342,11 @@ input:invalid {
 }
 
 
-
-.table .thead-light th{
-    color: white;
-    background-color: #28a745;
-    
-
-
+.btn {
+    z-index: 33 !important;
+    position: relative;
 }
 
-.Category_th{
-    background-color: gray !important;
+.hide{
+    display: none !important;
 }
-
-
-/* .tbl-header{
-    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-    background: linear-gradient(to right, #25c481, #25b7c4);
-   } */
-
-   .btn {
-       z-index: 33 !important;
-       position: relative;
-   }
-
-   /* .custom-model-inner{
-    z-index: 55 !important;
-
-   } */
