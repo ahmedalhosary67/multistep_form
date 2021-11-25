@@ -53,7 +53,7 @@ function addItem(type, event) {
 // Define the function
 // to screenshot the div
 function takeshot() {
-  let div = document.getElementById("table-container");
+  let div = document.getElementById("example").cloneNode(true);
   // Use the html2canvas
   // function to take a screenshot
   // and append it
@@ -61,12 +61,27 @@ function takeshot() {
   $("#output").children().remove();
   setTimeout(() => {
     if ($("#output").parent().parent().parent().hasClass("show")) {
-      html2canvas(div).then(function (canvas) {
-        document.getElementById("output").appendChild(canvas);
-      });
-    }
+      // html2canvas(div).then(function (canvas) {
+        document.getElementById("output").append(div);
+        console.log(div);
+        // });
+      }
+      let x = $('#output #example thead th')
+        x.each(i => {
+            if (x[i].children[1] == undefined) {
+    
+            } else {
+                x[i].children[1].classList.add('hide')
+                console.log(x[i].children[1].classList);
+            }
+        })
+      
+      // $('table thead th button').each(x => {
+      //     $('table thead th button')[x].classList.remove('hide')
+      // })
   }, 200);
 }
+
 
 function downloadPdf() {
   var canvas = document.querySelector("canvas");
@@ -91,46 +106,41 @@ function getModal(type) {
             <div class="items">
               <div class="adding row">
                 <div class="add col-6">Add Item</div>
-                <div class="close-btn col-6" onclick="closeModal()">×</div>
+                <div class="close col-6" onclick="closeModal()">×</div>
               </div>
               <form onsubmit="addItem( '  ${type}  ', event)">
-                <div class="input-ele">
-                  <div class="mb-3 row">
+                <div class="input-ele row">
+                  <div class="mb-3 col-lg-6">
                     <label
                       for="staticEmail"
-                      class="col-4 col-form-label"
-                      >Clothe Name:</label
+                      class=" col-form-label"
+                      >Clothe Name</label
                     >
-                    <div class="col-7">
-                      <input
-                        id="clothName"
-                        type="text"
-                        class="form-control"
-                        min="1"
-                      />
-                    </div>
+                    <input
+                      id="clothName"
+                      type="text"
+                      class="form-control"
+                      min="1"
+                    />
                   </div>
-                  <div class="mb-3 row">
+                  <div class="mb-3 col-lg-6">
                     <label
                       for="inputPassword"
-                      class="col-4 col-form-label"
-                      >Clothe Color:</label
+                      class=" col-form-label"
+                      >Clothe Color</label
                     >
-                    <div class="col-7">
-                      <input
-                        id="clothColor"
-                        type="text"
-                        class="form-control"
-                        min="1"
-                      />
-                    </div>
+                    <input
+                      id="clothColor"
+                      type="text"
+                      class="form-control"
+                      min="1"
+                    />
                   </div>
-                  <div class="mb-3 row">
+                  <div class="mb-4  col-lg-12">
                     <label
-                      class="col-4 col-form-label"
-                      >Cloth type:</label
+                      class=" col-form-label"
+                      >Cloth type</label
                     >
-                    <div class="col-7">
                       <select
                         id="clothType"
                         class="form-control"
@@ -141,7 +151,6 @@ function getModal(type) {
                       <option value="partyware">Partyware</option>
                       </select>
 
-                    </div>
                   </div>
                 </div>
                 <button
@@ -161,7 +170,3 @@ function getModal(type) {
 <div class="bg-overlay"  onclick="closeModal()"></div>
 </div>`;
 }
-
-
-
-

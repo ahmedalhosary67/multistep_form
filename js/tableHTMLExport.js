@@ -12,28 +12,38 @@ function generate() {
     })
 
 
-    console.log('element is ', elem)
+    // console.log('element is ', elem)
     var elem = document.getElementById("example");
 
     var data = doc.autoTableHtmlToJson(elem);
     doc.autoTable(data.columns, data.rows, {
+        margin: {left: 35},
+        //   theme: 'grid',
+          tableWidth: 'auto',
+          fontSize: 15,
+        //   overflow: 'linebreak',
         tableLineColor: [189, 195, 199],
         tableLineWidth: 0.75,
         styles: {
             font: "Meta",
-            lineColor: [44, 62, 80],
-            lineWidth: 0.55
+            lineColor: [233, 236, 239],
+            lineWidth: 0.25
         },
         headerStyles: {
-            fillColor: [358, 50, 215],
-            fontSize: 11
+            fillColor: [233, 236, 239],
+            textColor: 20,
+            fontSize: 15,
+            halign: 'center', 
+            valign: 'middle',
         },
         bodyStyles: {
-            fillColor: [216, 216, 216],
-            textColor: 20
+            fillColor: [242, 242, 242],
+            textColor: 13,
+            halign: 'center', 
+            valign: 'middle'
         },
         alternateRowStyles: {
-            fillColor: [250, 250, 250]
+            fillColor: [255, 255, 255],
         },
         startY: 100,
         drawRow: function (row, data) {
@@ -64,7 +74,7 @@ function generate() {
         },
         drawCell: function (cell, data) {
             // Rowspan
-            console.log(cell);
+            // console.log(cell);
             if ($(cell.raw).hasClass("innerHeader")) {
                 doc.setTextColor(200, 0, 0);
                 doc.autoTableText(
@@ -81,7 +91,8 @@ function generate() {
         }
     });
     doc.save("table.pdf");
-
+    // console.log(data);
+    // document.getElementById("output").append(data);
 }
 
 $("#export").click(function (e) {
