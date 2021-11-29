@@ -22,11 +22,11 @@ function generate() {
           tableWidth: 'auto',
           fontSize: 15,
         //   overflow: 'linebreak',
-        tableLineColor: [189, 195, 199],
-        tableLineWidth: 0.75,
+        tableLineColor: [222, 226, 230],
+        tableLineWidth: 0.25,
         styles: {
             font: "Meta",
-            lineColor: [233, 236, 239],
+            lineColor: [222, 226, 230],
             lineWidth: 0.25
         },
         headerStyles: {
@@ -66,7 +66,9 @@ function generate() {
             }
 
             if (row.index % 5 === 0) {
-                var posY = row.y + row.height * 6 + data.settings.margin.bottom;
+                var posY = row.y + row.height * 2 + data.settings.margin.bottom;
+                console.log(posY);
+                console.log(doc.internal.pageSize.height);
                 if (posY > doc.internal.pageSize.height) {
                     data.addPage();
                 }
@@ -91,8 +93,6 @@ function generate() {
         }
     });
     doc.save("table.pdf");
-    // console.log(data);
-    // document.getElementById("output").append(data);
 }
 
 $("#export").click(function (e) {

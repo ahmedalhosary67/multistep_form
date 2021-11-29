@@ -7,7 +7,9 @@ $(this).on("keydown click", () => {
   $(".welcome").addClass("animate__animated animate__fadeInDownBig");
   $("table button").addClass("animate__animated animate__zoomIn");
   $("header img").addClass("animate__animated animate__zoomIn");
-  $("section .export-pdf-button").addClass("animate__animated animate__fadeInLeftBig");
+  $("section .export-pdf-button").addClass(
+    "animate__animated animate__fadeInLeftBig"
+  );
 });
 
 function openModel(type, e) {
@@ -32,19 +34,13 @@ function addItem(type, event) {
   clothName.nextSibling.remove();
 
   if (!clothName.value == "" || !clothColor.value == "") {
-    table.innerHTML += `<span class="task-box">${
-      clothName.value == "" ? "Undefind" : clothName.value
-    } _ ${clothColor.value == "" ? "Undefind" : clothColor.value}</span><br />`;
-
-    // if (clothName.value == "") {
-    //   clothName.parentNode.innerHTML += `<span class="text text-danger" style="position: absolute;font-size:20px">please insert cloth name</span>`;
-    //   // return;
-    // }
-    // if (clothColor.value == "") {
-    //   clothColor.parentNode.innerHTML += `<span class="text text-danger" style="position: absolute;font-size:20px">please insert cloth color</span>`;
-    // }
-
-    // return;
+    table.innerHTML += `<span class="task-box dropright">
+    <span class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> ${clothName.value} _ ${clothColor.value}</span>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="min-width: 0px;">
+      <span class="button text-danger delete fa fa-trash-o mr-2 ml-2" onclick="deleteFunc(this)" id="deleteItem"></span>
+      <span class="button text-dark edit fa fa-pencil-square-o mr-2" onclick="editFunc(this, '${clothName.value}','${clothColor.value}','${clothType.value}','${type}')"></span>
+    </div>
+    <br /></span>`;
   }
 
   document.getElementById("modal-wrapper").innerHTML = "";
@@ -62,26 +58,19 @@ function takeshot() {
   setTimeout(() => {
     if ($("#output").parent().parent().parent().hasClass("show")) {
       // html2canvas(div).then(function (canvas) {
-        document.getElementById("output").append(div);
-        console.log(div);
-        // });
-      }
-      let x = $('#output #example thead th')
-        x.each(i => {
-            if (x[i].children[1] == undefined) {
-    
-            } else {
-                x[i].children[1].classList.add('hide')
-                console.log(x[i].children[1].classList);
-            }
-        })
-      
-      // $('table thead th button').each(x => {
-      //     $('table thead th button')[x].classList.remove('hide')
-      // })
+      document.getElementById("output").append(div);
+      // });
+    }
+    let x = $("#output #example button, #output #example .button");
+    x.each((i) => {
+      x[i].classList.add("hide");
+    });
+    // let aftr = $("#output #example .dropright .dropdown-toggle::after");
+    // aftr.each((i) => {
+    //   aftr[i].remove();
+    // });
   }, 200);
 }
-
 
 function downloadPdf() {
   var canvas = document.querySelector("canvas");
@@ -169,4 +158,31 @@ function getModal(type) {
 </div>
 <div class="bg-overlay"  onclick="closeModal()"></div>
 </div>`;
+}
+
+// function edit(e) {
+//   e.children[1].classList.toggle("hide");
+//   e.children[1].classList.toggle("animate__zoomIn");
+//   e.children[2].classList.toggle("hide");
+//   e.children[2].classList.toggle("animate__zoomIn");
+// }
+
+// delete function
+
+function deleteFunc(elem) {
+  let t = elem.parentNode.parentNode;
+  t.parentNode.removeChild(t);
+}
+
+//  edit function
+
+function editFunc(elem, x, y, z, type) {
+  openModel(type);
+
+  clothName.value = x;
+  clothColor.value = y;
+  clothType.value = z;
+
+  let t = elem.parentNode.parentNode;
+  t.parentNode.removeChild(t);
 }
