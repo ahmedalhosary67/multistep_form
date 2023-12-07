@@ -1,62 +1,83 @@
 /* your CSS goes here*/
 @font-face {
-    font-family: Meie;
-    src: url(../webfonts/MeieScript-Regular.ttf);
+  font-family: Meie;
+  src: url(../webfonts/MeieScript-Regular.ttf);
 }
 body {
-    height: 100vh;
+  height: 100vh;
+  color: white;
 }
-.wrapper{
-    background: #000;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+.wrapper {
+  /* background-image: linear-gradient(#1d1f21, #000000); */
+  background-image: url(../image/background2.svg);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-header{
-    color: white;
-    font-family: Meie;
+header {
+  background-image: url(../image/background2.svg);
+  /* background-image: linear-gradient(#1d1f21, #000000); */
+  color: white;
+  font-family: Meie;
 }
 
 #regForm {
-    background-color: #ffffff;
-    margin: 0px auto;
-    font-family: Raleway;
-    padding: 40px;
-    border-radius: 10px
+  /* margin: 0px auto; */
+}
+.form-check-input {
+  float: none !important;
+  margin-left: 10px !important;
+}
+.form-check-input:checked {
+  background-color: #67f90ea6;
+  border-color: #67f90ea6;
+  box-shadow: none;
+}
+.sideLine {
+  width: 10.758px;
+  height: 31px;
+  flex-shrink: 0;
+  background-color: white;
 }
 
-h1 {
-    text-align: center
+.input_field input,
+.input_field input:focus {
+  background-color: #000;
+  color: #e4e4e4;
+  border-color: #e4e4e4;
+}
+.input_field input::placeholder,
+.input_field input:focus {
+  color: #e4e4e4;
 }
 
-
-input.invalid {
-    background-color: #ffdddd
-}
+/* input.invalid {
+  background-color: #ffdddd;
+} */
 
 .tab {
-    display: none
+  display: none;
+}
+.gradian_button {
+  background-image: linear-gradient(#eb1d1d8c, #ff00008f, #00ff0a54);
+  /* padding: 5px; */
 }
 
 button {
-    background-color: #4CAF50;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 17px;
-    font-family: Raleway;
-    cursor: pointer
+  /* box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.06),
+    0px 4px 4px 0px rgba(50, 50, 71, 0.08); */
+  margin: 3px;
+  background-color: #000;
+  border: none;
+  color: #ffffff;
+  padding: 10px 50px;
+  font-size: 17px;
 }
 
 button:hover {
-    opacity: 0.8
+  opacity: 0.8;
 }
-
-#prevBtn {
-    background-color: #bbbbbb
-}
-
 
 .thanks-message {
-    display: none
+  display: none;
 }
