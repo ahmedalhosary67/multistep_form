@@ -6,176 +6,90 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/animate.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>Organizing</title>
+  <title>multi-step-form</title>
 </head>
 
-<body>
-  <div class="collect-parts col-12 col-sm-10 col-lg-8 col-xl-6">
-    <header class="head">
-      <div class="home">Home</div>
-      <div class="about-us">About Us</div>
+<body lang="ar" dir="rtl">
+  <div class="wrapper">
+    <header class="d-flex align-items-center">
+      <h3 dir="ltr" class="flex-grow-1 text-center">“It always seems impossible until it's done.” ...</h3>
+      <img src="/image/LOGO-JPG-white 2.png" />
     </header>
-    <div id="loader"></div>
+    <div class="container flex-grow-1 mt-5">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-md-6">
+          <form id="regForm">
+            <!-- <h1 id="register">Donate</h1> -->
+            <div class="tab">
+              <h3>المعلومات الرئيسية :</h3>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <!-- <p><input type="text" placeholder="Amount" oninput="this.className = ''" name="amount"></p> -->
 
-    <section class="explain">
-      <div class="welcome">
-        <h1>Welcome !</h1>
-      </div>
-      <div class="usage">
-        <p>Use this table to organize your cabinet</p>
-      </div>
-    </section>
+            </div>
+            <div class="tab">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
 
-    <section class="cat-table">
-      <!-- <div id="table-container"> -->
-      <!-- <table class="table table-bordered table-striped" id="organizer"> -->
-      <table class="table table-bordered table-striped" id="example">
-        <thead class="thead-light">
-          <tr>
-            <th style="vertical-align: middle;" scope="col">Category</th>
-            <th scope="col">
-              Not been used
-              <br><button class="btn btn-success" onclick="openModel('notUsed')">+ Item</button>
-            </th>
-            <th scope="col">
-              Bad Statue
-              <br><button class="btn btn-success" onclick="openModel('bad')">+ Item</th>
-            <th scope="col">
-              Good Statue
-              <br><button class="btn btn-success" onclick="openModel('good')">+ Item</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr id="workware">
-            <th scope="row">Workware</th>
-            <td>
-              <table class="notUsed"></table>
-            </td>
-            <td>
-              <table class="bad"></table>
-            </td>
-            <td>
-              <table class="good"></table>
-            </td>
-          </tr>
-          <tr id="home">
-            <th scope="row">Home</th>
-            <td>
-              <table class="notUsed"></table>
-            </td>
-            <td>
-              <table class="bad"></table>
-            </td>
-            <td>
-              <table class="good"></table>
-            </td>
-          </tr>
-          <tr id="sport">
-            <th scope="row">Sport</th>
-            <td>
-              <table class="notUsed"></table>
-            </td>
-            <td>
-              <table class="bad"></table>
-            </td>
-            <td>
-              <table class="good"></table>
-            </td>
-          </tr>
-          <tr id="partyware">
-            <th scope="row">Partyware</th>
-            <td>
-              <table class="notUsed"></table>
-            </td>
-            <td>
-              <table class="bad"></table>
-            </td>
-            <td>
-              <table class="good"></table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+            </div>
+            <div class="tab">
+              <p><input placeholder="Credit Card #" oninput="this.className = ''" name="email"></p>
+              <p>Exp Month
+                <select id="month">
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </p>
+              <p>Exp Year
+                <select id="year">
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                </select>
+              </p>
 
-      <!-- </div> -->
-    </section>
+              <p><input placeholder="CVV" oninput="this.className = ''" name="phone"></p>
+            </div>
 
-    <section class="export-pdf">
-      <button class="export-pdf-button btn" type="button" data-toggle="modal" data-target="#exampleModal"
-        onclick="takeshot()">Export as PDF</button>
-
-    </section>
-
-    <div id="modal-wrapper"></div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" style="color: #e2761a;" id="exampleModalLabel">Export As PDF</h3>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center" style="padding: 2rem 1rem;" id="output">
-
-          </div>
-          <div class="modal-footer export-pdf">
-            <button type="button" class=" btn btn-danger btn-lg" data-dismiss="modal">Close</button>
-            <button type="button" id="export" class=" btn btn-success btn-lg" data-toggle="modal" href="table.html"
-              data-target="#exampleModal1" data-dismiss="modal">Export</button>
-
-
-          </div>
+            <div class="thanks-message text-center" id="text-message">
+              <h3>تم وصول طلبك بنجاح
+                سيتم التواصل معك </h3>
+              <h3>Your request has been
+                sent successfully.</h3>
+            </div>
+            <div class="d-flex justify-content-center" id="nextprevious">
+              <div>
+                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-
-    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" style="color: #e2761a;" id="exampleModalLabel">ُExport as pdf</h3>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body text-center" style="padding: 2rem 1rem;font-size: 30px;">
-            The Exporting Done Successfully,
-            <br> Check Your Download..
-            <br><br> Have Fun Organizing !
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-success btn-lg" data-dismiss="modal">Done</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <footer>footer</footer>
   </div>
 
   <script src="./js/jquery-3.5.1.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/jquery.min.js"></script>
   <script src="./js/main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.10/jspdf.plugin.autotable.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.0.0-alpha.1/jspdf.plugin.autotable.js"></script>
-
-  <script src="./js/tableHTMLExport.js"></script>
 </body>
 
 </html>
