@@ -6,6 +6,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
   showTab(currentTab);
 });
 
+$("#regForm").on("submit", function (e) {
+  e.preventDefault();
+  console.log("data");
+});
+function submit(e, data) {
+  // e.preventDefault();
+  console.log(data);
+}
+
 function showTab(n) {
   var x = document.getElementsByClassName("tab");
   x[n].style.display = "block";
@@ -16,6 +25,7 @@ function showTab(n) {
   }
   if (n == x.length - 1) {
     document.getElementById("nextBtn").innerHTML = "تقدم الآن";
+    // document.getElementById("nextBtn").setAttribute("type", "submit");
   } else {
     document.getElementById("nextBtn").innerHTML = "التالي";
   }
@@ -28,7 +38,9 @@ function nextPrev(n) {
   x[currentTab].style.display = "none";
   currentTab = currentTab + n;
   if (currentTab >= x.length) {
+    submit();
     document.getElementById("regForm").submit();
+
     // return false;
     // alert("sdf");
     document.getElementById("nextprevious").style.display = "none";

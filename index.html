@@ -21,8 +21,9 @@
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-12">
             <form id="regForm">
-              <!-- <h1 id="register">Donate</h1> -->
-              <!-- <div class="tab">
+              <!-- tab 1 -->
+              <!-- 
+              <div class="tab">
                 <div class="d-flex gap-3">
                   <div class="sideLine"></div>
                   <h3 class="align-self-center">المعلومات الرئيسية:</h3>
@@ -71,14 +72,16 @@
                 </div>
               </div> -->
 
+              <!-- tab 2 -->
+
               <div class="tab">
                 <div class="d-flex gap-3">
                   <div class="sideLine"></div>
                   <h3 class="align-self-center">تحديد المستوى</h3>
                 </div>
-                <div class="row align-items-center justify-content-center mt-4">
+                <div class="row justify-content-center mt-4">
                   <div class="col-md-4 questionContainer">
-                    <div class="question question_2">
+                    <div class="question question_1">
                       س١.ما هو مستوى لياقتك البدنية الحالي؟
                     </div>
                     <div class="options">
@@ -200,7 +203,7 @@
                     </div>
                   </div>
                   <div class="col-md-4 questionContainer">
-                    <div class="question question_2">
+                    <div class="question question_3">
                       س٣. لماذا تمارس الرياضة؟
                     </div>
                     <div class="options">
@@ -256,61 +259,359 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="tab">
-                <div class="d-flex gap-3">
-                  <div class="sideLine"></div>
-                  <h3 class="align-self-center">تحديد المستوى</h3>
-                </div>
-                <div class="row align-items-center justify-content-center mt-4">
-                  <div class="col-md-4 questionContainer">
-                    <div class="question">
-                      س١.ما هو مستوى لياقتك البدنية الحالي؟
-                    </div>
-                    <div class="options">
-                      <div class="option option_1">answer1</div>
-                      <div class="option option_2">answer2</div>
-                      <div class="option option_3">answer3</div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 questionContainer">
-                    <div class="question">
-                      س١.ما هو مستوى لياقتك البدنية الحالي؟
-                    </div>
-                    <div class="options">
-                      <div class="option option_1">answer1</div>
-                      <div class="option option_2">answer2</div>
-                      <div class="option option_3">answer3</div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 questionContainer">
-                    <div class="question">
-                      س١.ما هو مستوى لياقتك البدنية الحالي؟
-                    </div>
-                    <div class="options">
-                      <div class="option option_1">answer1</div>
-                      <div class="option option_2">answer2</div>
-                      <div class="option option_3">answer3</div>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
+
+              <!-- tab 3 -->
+
               <div class="tab">
                 <div class="d-flex gap-3">
                   <div class="sideLine"></div>
                   <h3 class="align-self-center">تحديد المستوى</h3>
                 </div>
-                <div
-                  class="row align-items-center justify-content-center mt-4"
-                ></div>
+                <div class="row justify-content-center mt-4">
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_4">
+                      س٤. هل قمت بعمل خطة للتمارين الرياضية؟
+                    </div>
+                    <div class="options">
+                      <div class="form-check option option_1">
+                        <input
+                          class="form-check-input"
+                          value="نعم"
+                          type="radio"
+                          name="plan"
+                          id="plan1"
+                        />
+                        <label class="form-check-label" for="plan1">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="none"
+                          >
+                            <path
+                              d="M22 8L11 19L6 14"
+                              stroke="white"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          نعم
+                        </label>
+                      </div>
+                      <div class="form-check option option_2">
+                        <input
+                          class="form-check-input"
+                          value="لا"
+                          type="radio"
+                          name="plan"
+                          id="plan2"
+                        />
+                        <label class="form-check-label" for="plan2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="none"
+                          >
+                            <path
+                              d="M20 8L8 20M8 8L20 20"
+                              stroke="white"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          لا
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 question question_5">
+                    <div>
+                      س٥. هل حضرت أي من الألعاب الرياضية المعروضة أدناه؟
+                    </div>
+                    <div class="options">
+                      <div
+                        class="optionBox optionchoises d-md-inline-flex text-center option_yes"
+                      >
+                        <img src="./image/tickmark.svg" />
+                        نعم
+                      </div>
+                      <div
+                        class="optionBox option d-md-inline-flex text-center option_6"
+                      >
+                        <img src="./image/crossmark.svg" />
+                        لا
+                      </div>
+                      <div class="form-check option option_1 mt-3">
+                        <input
+                          class="form-check-input"
+                          value="جري"
+                          type="radio"
+                          name="sport"
+                          id="sport1"
+                        />
+                        <label class="form-check-label" for="sport1">
+                          جري
+                        </label>
+                      </div>
+                      <div class="form-check option option_2">
+                        <input
+                          class="form-check-input"
+                          value="سباحة"
+                          type="radio"
+                          name="sport"
+                          id="sport2"
+                        />
+                        <label class="form-check-label" for="sport2">
+                          سباحة
+                        </label>
+                      </div>
+                      <div class="form-check option option_3">
+                        <input
+                          class="form-check-input"
+                          value="ركوب دراجة"
+                          type="radio"
+                          name="sport"
+                          id="sport3"
+                        />
+                        <label class="form-check-label" for="sport3">
+                          ركوب دراجة
+                        </label>
+                      </div>
+                      <div class="form-check option option_4">
+                        <input
+                          class="form-check-input"
+                          value="تزلج"
+                          type="radio"
+                          name="sport"
+                          id="sport4"
+                        />
+                        <label class="form-check-label" for="sport4">
+                          تزلج
+                        </label>
+                      </div>
+                      <div class="form-check option option_5">
+                        <input
+                          class="form-check-input"
+                          value="فنون قتالية"
+                          type="radio"
+                          name="sport"
+                          id="sport5"
+                        />
+                        <label class="form-check-label" for="sport5">
+                          فنون قتالية
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_6">
+                      س٦. كيف تقوم بمعظم تمارينك الرياضية المعتادة؟
+                    </div>
+                    <div class="options">
+                      <div class="form-check option option_1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox1"
+                          name="howtraining"
+                          value="وحيدا"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox1"
+                          >وحيدا</label
+                        >
+                      </div>
+                      <div class="form-check option option_2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox2"
+                          name="howtraining"
+                          value="في صوره مجموعه"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox2"
+                          >في صوره مجموعه</label
+                        >
+                      </div>
+                      <div class="form-check option option_3">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="inlineCheckbox3"
+                          value="مختلط"
+                          name="howtraining"
+                        />
+                        <label class="form-check-label" for="inlineCheckbox3"
+                          >مختلط</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <!-- tab 4 -->
+
               <div class="tab">
                 <div class="d-flex gap-3">
                   <div class="sideLine"></div>
                   <h3 class="align-self-center">تحديد المستوى</h3>
                 </div>
-                <div
-                  class="row align-items-center justify-content-center mt-4"
-                ></div>
+                <div class="row justify-content-center mt-4">
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_7">
+                      س٧. هل تحاول تحسين آدائك الرياضي؟
+                    </div>
+                    <div class="options">
+                      <div class="optionBox2 option option_1">
+                        <img src="./image/tickmark.svg" />
+                        نعم
+                      </div>
+                      <div class="optionBox2 option option_2">
+                        <img src="./image/crossmark.svg" />
+                        لا
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_8">
+                      س٨. هل انت شخص مدخن للسجائر؟
+                    </div>
+                    <div class="options">
+                      <div class="optionBox2 option option_1">
+                        <img src="./image/tickmark.svg" />
+                        نعم
+                      </div>
+                      <div class="optionBox2 option option_2">
+                        <img src="./image/crossmark.svg" />
+                        لا
+                      </div>
+                      <div class="optionBox2 option option_3">
+                        <img src="./image/clock.svg" />
+                        احيانا
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_9">
+                      س٩. هل لديك أي قيود طبية تمنعك من ممارسة الرياضة؟
+                    </div>
+                    <div class="options">
+                      <div class="optionBox2 optionchoises option_1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="28"
+                          height="28"
+                          viewBox="0 0 28 28"
+                          fill="none"
+                        >
+                          <path
+                            d="M22 8L11 19L6 14"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        نعم
+                      </div>
+                      <div class="optionBox2 option option_2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="28"
+                          height="28"
+                          viewBox="0 0 28 28"
+                          fill="none"
+                        >
+                          <path
+                            d="M20 8L8 20M8 8L20 20"
+                            stroke="white"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        لا
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- tab 5 -->
+
+              <div class="tab">
+                <div class="d-flex gap-3">
+                  <div class="sideLine"></div>
+                  <h3 class="align-self-center">تحديد المستوى</h3>
+                </div>
+                <div class="row justify-content-center mt-4">
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_10">
+                      س10. هل تتبع مع المدربين نظام غذائي لتعزيز حالتك؟
+                    </div>
+                    <div class="options">
+                      <div class="optionBox2 optionchoises option_1">
+                        <img src="./image/tickmark.svg" />
+                        نعم
+                      </div>
+                      <div class="optionBox2 option option_2">
+                        <img src="./image/crossmark.svg" />
+                        لا
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_11">
+                      س11. هل تستهلك المكملات الغذائية للألعاب الرياضية؟
+                    </div>
+                    <div class="options">
+                      <div class="optionBox2 optionchoises option_1">
+                        <img src="./image/tickmark.svg" />
+                        نعم
+                      </div>
+                      <div class="optionBox2 option option_2">
+                        <img src="./image/crossmark.svg" />
+                        لا
+                      </div>
+                      <div class="optionBox2 option option_3">
+                        <img src="./image/clock.svg" />
+                        احيانا
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 questionContainer">
+                    <div class="question question_12">
+                      س12. هل تفضل ممارسة الرياضة في فترة الصباح أو المساء ؟
+                    </div>
+                    <div class="options">
+                      <div class="form-check option option_1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="time1"
+                          name="time"
+                          value="فتره المساء"
+                        />
+                        <label class="form-check-label" for="time1"
+                          >فتره المساء</label
+                        >
+                      </div>
+                      <div class="form-check option option_2">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="time2"
+                          name="time"
+                          value="فتره الصباح"
+                        />
+                        <label class="form-check-label" for="time2"
+                          >فتره الصباح</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div class="thanks-message text-center" id="text-message">

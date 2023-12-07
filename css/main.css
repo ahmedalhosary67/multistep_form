@@ -26,12 +26,48 @@ header {
 }
 .form-check-input {
   float: none !important;
-  margin-left: 10px !important;
+  margin-left: 0px !important;
+  cursor: pointer;
+}
+.form-check-label {
+  padding-right: 10px !important;
+  cursor: pointer;
 }
 .form-check-input:checked {
   background-color: #67f90ea6;
   border-color: #67f90ea6;
   box-shadow: none;
+}
+.question .form-check-input:checked {
+  background-color: #67f90ea6;
+  border-color: #67f90ea6;
+  box-shadow: none;
+}
+.question .optionBox {
+  width: 45%;
+  background-color: #000;
+  color: #e4e4e4;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-inline: 3px;
+  justify-content: center;
+  cursor: pointer;
+  /* display: inline-flex; */
+}
+.optionBox2 {
+  /* width: 45%; */
+  display: flex;
+  background-color: #000;
+  color: #e4e4e4;
+  border: 1px solid #e4e4e4;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-inline: 3px;
+  padding: 5px 0;
+  align-items: center;
+  cursor: pointer;
+  /* display: inline-flex; */
 }
 .sideLine {
   width: 10.758px;
@@ -59,14 +95,22 @@ header {
   display: none;
 }
 .gradian_button {
-  background-image: linear-gradient(#eb1d1d8c, #ff00008f, #00ff0a54);
+  background-image: linear-gradient(
+    120deg,
+    #eb1d1d8c,
+    #ff00008f,
+    #00ff0a54 80%
+  );
+  box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.06),
+    0px 4px 4px 0px rgba(50, 50, 71, 0.08);
+  border-radius: 5px;
+  overflow: hidden;
   /* padding: 5px; */
 }
 
 button {
-  /* box-shadow: 0px 4px 8px 0px rgba(50, 50, 71, 0.06),
-    0px 4px 4px 0px rgba(50, 50, 71, 0.08); */
-  margin: 3px;
+  border-radius: 5px;
+  margin: 1px;
   background-color: #000;
   border: none;
   color: #ffffff;
