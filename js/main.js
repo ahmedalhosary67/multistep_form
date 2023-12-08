@@ -4,6 +4,11 @@ var results = {};
 
 document.addEventListener("DOMContentLoaded", function (event) {
   showTab(currentTab);
+
+  // document.getElementById("text-message").style.display = "block";
+  // document.getElementById("contnetcontainer").style.display = "none";
+  // document.getElementById("largefooter").style.display = "none";
+  // $(".backgroundImg").css("display", "none");
 });
 
 $(".input_field").on("change", function (e) {
@@ -111,14 +116,19 @@ function nextPrev(n) {
   if (n == 1 && !validateForm()) return false;
   x[currentTab].style.display = "none";
   currentTab = currentTab + n;
+  // if (currentTab >= x.length) {
   if (currentTab >= x.length) {
     submit();
     // document.getElementById("regForm").submit();
 
-    document.getElementById("nextprevious").style.display = "none";
+    // document.getElementById("nextprevious").style.display = "none";
     // document.getElementById("all-steps").style.display = "none";
     // document.getElementById("register").style.display = "none";
-    document.getElementById("text-message").style.display = "block";
+    // document.getElementById("text-message").style.display = "block";
+    // document.getElementById("contnetcontainer").style.display = "none";
+    // document.getElementById("largefooter").style.display = "none";
+    // $(".backgroundImg").css("display", "none");
+    window.location.replace("./success.html");
   }
   showTab(currentTab);
 }
