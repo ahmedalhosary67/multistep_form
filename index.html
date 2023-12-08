@@ -20,13 +20,13 @@
       <div class="container flex-grow-1 mt-5">
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-12">
-            <form id="regForm">
+            <form id="regForm" action="" method="post">
               <!-- tab 1 -->
 
               <div class="tab">
                 <div class="d-flex gap-3">
                   <div class="sideLine"></div>
-                  <h3 class="align-self-center">المعلومات الرئيسية:</h3>
+                  <h3 class="align-self-center">المعلومات الرئيسية</h3>
                 </div>
                 <div class="row align-items-center justify-content-center mt-4">
                   <div class="col-md-4 input_field mb-5 px-4">
@@ -273,57 +273,21 @@
                       س٤. هل قمت بعمل خطة للتمارين الرياضية؟
                     </div>
                     <div class="options">
-                      <div class="form-check option option_1">
-                        <input
-                          class="form-check-input"
-                          value="نعم"
-                          type="radio"
-                          name="plan"
-                          id="plan1"
-                        />
-                        <label class="form-check-label" for="plan1">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="28"
-                            height="28"
-                            viewBox="0 0 28 28"
-                            fill="none"
-                          >
-                            <path
-                              d="M22 8L11 19L6 14"
-                              stroke="white"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          نعم
-                        </label>
+                      <div
+                        class="optionBox2 option option_1"
+                        name="plan"
+                        value="نعم"
+                      >
+                        <img src="./image/tickmark.svg" />
+                        نعم
                       </div>
-                      <div class="form-check option option_2">
-                        <input
-                          class="form-check-input"
-                          value="لا"
-                          type="radio"
-                          name="plan"
-                          id="plan2"
-                        />
-                        <label class="form-check-label" for="plan2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="28"
-                            height="28"
-                            viewBox="0 0 28 28"
-                            fill="none"
-                          >
-                            <path
-                              d="M20 8L8 20M8 8L20 20"
-                              stroke="white"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          لا
-                        </label>
+                      <div
+                        class="optionBox2 option option_2"
+                        name="plan"
+                        value="لا"
+                      >
+                        <img src="./image/crossmark.svg" />
+                        لا
                       </div>
                     </div>
                   </div>
@@ -333,18 +297,23 @@
                     </div>
                     <div class="options">
                       <div
-                        class="optionBox optionchoises d-md-inline-flex text-center option_yes"
+                        class="optionBox2 option sportsyes"
+                        name="sport"
+                        value="نعم"
                       >
                         <img src="./image/tickmark.svg" />
                         نعم
                       </div>
                       <div
-                        class="optionBox option d-md-inline-flex text-center option_6"
+                        class="optionBox2 option option_6"
+                        name="sport"
+                        value="لا"
                       >
                         <img src="./image/crossmark.svg" />
                         لا
                       </div>
-                      <div class="form-check option option_1 mt-3">
+
+                      <div class="form-check option sportchoises disabled mt-3">
                         <input
                           class="form-check-input"
                           value="جري"
@@ -356,7 +325,7 @@
                           جري
                         </label>
                       </div>
-                      <div class="form-check option option_2">
+                      <div class="form-check option sportchoises disabled">
                         <input
                           class="form-check-input"
                           value="سباحة"
@@ -368,7 +337,7 @@
                           سباحة
                         </label>
                       </div>
-                      <div class="form-check option option_3">
+                      <div class="form-check option sportchoises disabled">
                         <input
                           class="form-check-input"
                           value="ركوب دراجة"
@@ -380,7 +349,7 @@
                           ركوب دراجة
                         </label>
                       </div>
-                      <div class="form-check option option_4">
+                      <div class="form-check option sportchoises disabled">
                         <input
                           class="form-check-input"
                           value="تزلج"
@@ -392,7 +361,7 @@
                           تزلج
                         </label>
                       </div>
-                      <div class="form-check option option_5">
+                      <div class="form-check option sportchoises disabled">
                         <input
                           class="form-check-input"
                           value="فنون قتالية"
@@ -465,11 +434,19 @@
                       س٧. هل تحاول تحسين آدائك الرياضي؟
                     </div>
                     <div class="options">
-                      <div class="optionBox2 option option_1">
+                      <div
+                        class="optionBox2 option option_1"
+                        name="improvment"
+                        value="نعم"
+                      >
                         <img src="./image/tickmark.svg" />
                         نعم
                       </div>
-                      <div class="optionBox2 option option_2">
+                      <div
+                        class="optionBox2 option option_2"
+                        name="improvment"
+                        value="لا"
+                      >
                         <img src="./image/crossmark.svg" />
                         لا
                       </div>
@@ -480,15 +457,27 @@
                       س٨. هل انت شخص مدخن للسجائر؟
                     </div>
                     <div class="options">
-                      <div class="optionBox2 option option_1">
+                      <div
+                        class="optionBox2 option option_1"
+                        name="smoking"
+                        value="نعم"
+                      >
                         <img src="./image/tickmark.svg" />
                         نعم
                       </div>
-                      <div class="optionBox2 option option_2">
+                      <div
+                        class="optionBox2 option option_2"
+                        name="smoking"
+                        value="لا"
+                      >
                         <img src="./image/crossmark.svg" />
                         لا
                       </div>
-                      <div class="optionBox2 option option_3">
+                      <div
+                        class="optionBox2 option option_3"
+                        name="smoking"
+                        value="احيانا"
+                      >
                         <img src="./image/clock.svg" />
                         احيانا
                       </div>
@@ -498,40 +487,39 @@
                     <div class="question question_9">
                       س٩. هل لديك أي قيود طبية تمنعك من ممارسة الرياضة؟
                     </div>
-                    <div class="options">
-                      <div class="optionBox2 optionchoises option_1">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="28"
-                          height="28"
-                          viewBox="0 0 28 28"
-                          fill="none"
-                        >
-                          <path
-                            d="M22 8L11 19L6 14"
-                            stroke="white"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                    <div class="row options m-0">
+                      <div
+                        class="col-md-5 optionBox2 justify-content-center option option_1"
+                        name="contraindecations"
+                        value="نعم"
+                      >
+                        <!-- <img src="./image/tickmark.svg" /> -->
                         نعم
                       </div>
-                      <div class="optionBox2 option option_2">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="28"
-                          height="28"
-                          viewBox="0 0 28 28"
-                          fill="none"
-                        >
-                          <path
-                            d="M20 8L8 20M8 8L20 20"
-                            stroke="white"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
+                      <div
+                        class="col-md-5 optionBox2 justify-content-center option option_2"
+                        name="contraindecations"
+                        value="لا"
+                      >
                         لا
+                      </div>
+                      <div
+                        class="col-md-5 optionBox2 justify-content-center option option_3"
+                        name="contraindecations"
+                        value="غير ذلك"
+                      >
+                        غير ذلك
+                      </div>
+                      <div
+                        class="col-md-6 input_field justify-content-center disabled p-0"
+                        style="margin: 10px 3px 0"
+                      >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="contraindecations"
+                          placeholder="ما هي؟"
+                        />
                       </div>
                     </div>
                   </div>
@@ -551,11 +539,19 @@
                       س10. هل تتبع مع المدربين نظام غذائي لتعزيز حالتك؟
                     </div>
                     <div class="options">
-                      <div class="optionBox2 optionchoises option_1">
+                      <div
+                        class="optionBox2 option option_1"
+                        name="coatch"
+                        value="نعم"
+                      >
                         <img src="./image/tickmark.svg" />
                         نعم
                       </div>
-                      <div class="optionBox2 option option_2">
+                      <div
+                        class="optionBox2 option option_2"
+                        name="coatch"
+                        value="لا"
+                      >
                         <img src="./image/crossmark.svg" />
                         لا
                       </div>
@@ -566,15 +562,27 @@
                       س11. هل تستهلك المكملات الغذائية للألعاب الرياضية؟
                     </div>
                     <div class="options">
-                      <div class="optionBox2 optionchoises option_1">
+                      <div
+                        class="optionBox2 option option_1"
+                        name="dietary"
+                        value="نعم"
+                      >
                         <img src="./image/tickmark.svg" />
                         نعم
                       </div>
-                      <div class="optionBox2 option option_2">
+                      <div
+                        class="optionBox2 option option_2"
+                        name="dietary"
+                        value="لا"
+                      >
                         <img src="./image/crossmark.svg" />
                         لا
                       </div>
-                      <div class="optionBox2 option option_3">
+                      <div
+                        class="optionBox2 option option_3"
+                        name="dietary"
+                        value="احيانا"
+                      >
                         <img src="./image/clock.svg" />
                         احيانا
                       </div>
@@ -589,11 +597,11 @@
                         <input
                           class="form-check-input"
                           type="checkbox"
-                          id="time1"
-                          name="time"
+                          id="duration1"
+                          name="duration"
                           value="فتره المساء"
                         />
-                        <label class="form-check-label" for="time1"
+                        <label class="form-check-label" for="duration1"
                           >فتره المساء</label
                         >
                       </div>
@@ -601,11 +609,11 @@
                         <input
                           class="form-check-input"
                           type="checkbox"
-                          id="time2"
-                          name="time"
+                          id="duration2"
+                          name="duration"
                           value="فتره الصباح"
                         />
-                        <label class="form-check-label" for="time2"
+                        <label class="form-check-label" for="duration2"
                           >فتره الصباح</label
                         >
                       </div>
@@ -618,10 +626,7 @@
                 <h3>تم وصول طلبك بنجاح سيتم التواصل معك</h3>
                 <h3>Your request has been sent successfully.</h3>
               </div>
-              <div
-                class="d-flex justify-content-center gap-3 mt-3"
-                id="nextprevious"
-              >
+              <div class="justify-content-center gap-3 mt-3" id="nextprevious">
                 <div class="gradian_button">
                   <button type="button" id="nextBtn" onclick="nextPrev(1)">
                     التالي

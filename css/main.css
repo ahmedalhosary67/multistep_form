@@ -55,6 +55,9 @@ header {
   cursor: pointer;
   /* display: inline-flex; */
 }
+.optionBox2.active {
+  border: 1px solid #67f90ea6;
+}
 .optionBox2 {
   /* width: 45%; */
   display: flex;
@@ -96,7 +99,7 @@ header {
 }
 .gradian_button {
   background-image: linear-gradient(
-    120deg,
+    130deg,
     #eb1d1d8c,
     #ff00008f,
     #00ff0a54 80%
@@ -116,6 +119,8 @@ button {
   color: #ffffff;
   padding: 10px 50px;
   font-size: 17px;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
@@ -124,4 +129,10 @@ button:hover {
 
 .thanks-message {
   display: none;
+}
+.disabled {
+  display: none;
+}
+#nextprevious {
+  display: flex;
 }
