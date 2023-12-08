@@ -4,12 +4,13 @@
   src: url(../webfonts/MeieScript-Regular.ttf);
 }
 body {
-  height: 100vh;
+  /* height: 100vh; */
   color: white;
+  /* overflow: hidden; */
 }
 .wrapper {
-  /* background-image: linear-gradient(#1d1f21, #000000); */
-  background-image: url(../image/background2.svg);
+  background-image: linear-gradient(130deg, #1d1f21, #000000 50%);
+  /* background-image: url(../image/background2.svg); */
   background-size: cover;
   min-height: 100%;
   display: flex;
@@ -145,4 +146,108 @@ button:hover {
 }
 #nextprevious {
   display: flex;
+}
+/* .backgroundImg {
+  position: absolute;
+  top: 0;
+} */
+
+footer {
+  position: relative;
+}
+
+.img11 {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+}
+.img12 {
+  position: absolute;
+  z-index: 6;
+}
+.img6 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+.img4 {
+  position: absolute;
+  top: 50%;
+  z-index: 6;
+}
+
+.groupimg {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  transform: translateX(50%);
+}
+.img5 {
+  position: relative;
+}
+.img13 {
+  position: relative;
+}
+.img2 {
+  position: relative;
+}
+
+.exploregroup {
+  position: relative;
+  z-index: 9;
+}
+.img3 {
+  display: block;
+  position: relative;
+  top: 60px;
+  left: 70px;
+}
+.followgroup {
+  position: relative;
+  z-index: 1;
+  margin-bottom: -300px;
+  margin-top: -150px;
+}
+.img8 {
+  position: absolute;
+  z-index: 9;
+  top: 20%;
+  left: 4%;
+}
+.img7 {
+  position: absolute;
+  z-index: 9;
+  top: 40%;
+  left: 10%;
+}
+.img9 {
+  position: relative;
+}
+
+.img10 {
+  position: relative;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 768px) {
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6,
+  .img7,
+  .img8,
+  .img9,
+  .img11,
+  .img12,
+  .img13 {
+    width: 50%;
+  }
 }
