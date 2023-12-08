@@ -16,6 +16,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.contnetcontainer {
+  height: 500px;
+}
 header {
   background-image: url(../image/background2.svg);
   background-size: cover;
@@ -48,6 +51,9 @@ header {
   background-color: #67f90ea6;
   border-color: #67f90ea6;
   box-shadow: none;
+}
+.questionContainer {
+  margin-bottom: 3rem;
 }
 .question .optionBox {
   width: 45%;
@@ -234,11 +240,35 @@ footer {
   position: relative;
   z-index: 5;
 }
-
+.exploregroupsm {
+  position: relative;
+  z-index: 9;
+  display: none;
+}
 @media only screen and (max-width: 768px) {
-  .img1,
+  .exploregroupsm {
+    display: block;
+  }
+  .contnetcontainer {
+    height: 700px;
+  }
+  .img1 {
+    position: relative;
+    margin: 0 20px;
+    width: 90%;
+    /* left: 10%; */
+  }
+  .img3 {
+    width: 30%;
+    top: 0;
+    left: 5px;
+    transform: rotateZ(345deg);
+  }
+  .exploregroup {
+    display: none;
+  }
+  /* .img1, */
   .img2,
-  .img3,
   .img4,
   .img5,
   .img6,
@@ -249,5 +279,11 @@ footer {
   .img12,
   .img13 {
     width: 50%;
+  }
+  #nextprevious {
+    flex-direction: column;
+  }
+  #nextprevious button {
+    width: 99.5%;
   }
 }
