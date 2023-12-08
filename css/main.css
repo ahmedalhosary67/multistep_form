@@ -10,18 +10,22 @@ body {
 .wrapper {
   /* background-image: linear-gradient(#1d1f21, #000000); */
   background-image: url(../image/background2.svg);
+  background-size: cover;
   min-height: 100%;
   display: flex;
   flex-direction: column;
 }
 header {
   background-image: url(../image/background2.svg);
+  background-size: cover;
   /* background-image: linear-gradient(#1d1f21, #000000); */
   color: white;
   font-family: Meie;
 }
 
 #regForm {
+  position: relative;
+  z-index: 99999;
   /* margin: 0px auto; */
 }
 .form-check-input {
@@ -132,8 +136,12 @@ button:hover {
 .thanks-message {
   display: none;
 }
-.disabled {
+.input_field.disabled {
   display: none;
+}
+.sportchoises.disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 #nextprevious {
   display: flex;

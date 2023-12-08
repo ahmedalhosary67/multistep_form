@@ -12,7 +12,6 @@ $(".input_field").on("change", function (e) {
 });
 $(".sportsyes").on("click", function (e) {
   $(".sportchoises").removeClass("disabled");
-  // results[e.target.name] = e.target.value;
 });
 
 $(".option").on("click", function (e) {
@@ -78,16 +77,33 @@ function showTab(n) {
   }
   if (n == x.length - 1) {
     document.getElementById("nextBtn").innerHTML = "تقدم الآن";
-    // document.getElementById("nextBtn").setAttribute("type", "submit");
   } else {
     document.getElementById("nextBtn").innerHTML = "التالي";
   }
-  // fixStepIndicator(n)
 }
 
-function submit() {
-  // e.preventDefault();
-  console.log(results);
+function submit(e) {
+  let data = new FormData();
+
+  results["howtraining"] = results["howtraining"]
+    .split(" - ")
+    .filter((el) => el !== "undefined")
+    .join(" - ");
+  results["duration"] = results["duration"]
+    .split(" - ")
+    .filter((el) => el !== "undefined")
+    .join(" - ");
+  for (const key in results) {
+    if (Object.hasOwnProperty.call(results, key)) {
+      data.append(key, results[key]);
+    }
+  }
+  fetch(
+    "https://script.google.com/macros/s/AKfycbw1eH1c6p73IiO9Qq09dbqbnjdLT16U0xRabfooedHv6OfYNlGYmsa7v5Gl_Z8N49JAHQ/exec",
+    { method: "POST", body: data }
+  )
+    .then((res) => res.text())
+    .then((res) => console.log("Success"));
 }
 
 function nextPrev(n) {
@@ -99,8 +115,6 @@ function nextPrev(n) {
     submit();
     // document.getElementById("regForm").submit();
 
-    // return false;
-    // alert("sdf");
     document.getElementById("nextprevious").style.display = "none";
     // document.getElementById("all-steps").style.display = "none";
     // document.getElementById("register").style.display = "none";
@@ -118,15 +132,12 @@ function validateForm() {
   y = x[currentTab].getElementsByTagName("input");
   z = x[currentTab].getElementsByClassName("options");
   for (i = 0; i < z.length; i++) {
-    console.log($(z[i]));
-    // console.log(results[z[i].getAttribute("name")]);
     if (!$(z[i]).hasClass("completed")) {
       z[i].className += " invalid";
       valid = false;
     }
   }
   for (i = 0; i < y.length; i++) {
-    console.log(y[i].parentElement.classList.contains("disabled"));
     if (y[i].parentElement.classList.contains("disabled")) {
       return valid;
     }
@@ -138,9 +149,3 @@ function validateForm() {
   // if (valid) { document.getElementsByClassName("step")[currentTab].className += " finish"; }
   return valid;
 }
-
-// function fixStepIndicator(n) {
-//     var i, x = document.getElementsByClassName("step");
-//     for (i = 0; i < x.length; i++) { x[i].className = x[i].className.replace(" active", ""); }
-//     x[n].className += " active";
-// }
