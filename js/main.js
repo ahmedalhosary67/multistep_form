@@ -131,7 +131,7 @@ function validateForm() {
       return valid;
     }
     if (y[i].value == "") {
-      y[i].className += " invalid";
+      $(y[i]).parent().find(".valid-feedback").addClass("invalid");
       valid = false;
     }
   }

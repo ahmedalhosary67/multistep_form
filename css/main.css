@@ -28,6 +28,7 @@ header {
   float: none !important;
   margin-left: 0px !important;
   cursor: pointer;
+  border-color: #ff9191;
 }
 .form-check-label {
   padding-right: 10px !important;
@@ -73,7 +74,7 @@ header {
   /* display: inline-flex; */
 }
 .sideLine {
-  width: 10.758px;
+  width: 8px;
   height: 31px;
   flex-shrink: 0;
   background-color: white;
@@ -90,9 +91,10 @@ header {
   color: #e4e4e4;
 }
 
-/* input.invalid {
-  background-color: #ffdddd;
-} */
+.valid-feedback.invalid {
+  display: block;
+  color: #ff00008f;
+}
 
 .tab {
   display: none;
