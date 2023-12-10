@@ -4,7 +4,8 @@ var results = {};
 
 document.addEventListener("DOMContentLoaded", function (event) {
   showTab(currentTab);
-
+//   console.log(window.history.forward);
+//   window.location.replace("./")
   // document.getElementById("text-message").style.display = "block";
   // document.getElementById("contnetcontainer").style.display = "none";
   // document.getElementById("largefooter").style.display = "none";
