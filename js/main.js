@@ -104,7 +104,7 @@ function submit(e) {
     }
   }
   fetch(
-    "https://script.google.com/macros/s/AKfycbw1eH1c6p73IiO9Qq09dbqbnjdLT16U0xRabfooedHv6OfYNlGYmsa7v5Gl_Z8N49JAHQ/exec",
+    "https://script.google.com/macros/s/AKfycbyGxJOkBEBQ-9ON8Oi19D5QtPONOgS_IiRt_czsq-kk7PKgLBSy5-hScv6wRPaJJwcj/exec",
     { method: "POST", body: data }
   )
     .then((res) => res.text())
