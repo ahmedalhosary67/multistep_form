@@ -108,7 +108,8 @@ function submit(e) {
     { method: "POST", body: data }
   )
     .then((res) => res.text())
-    .then((res) => console.log("Success"));
+    .then((res) => console.log("Success"))
+    .then((res) => window.location.replace("./success.html"));
 }
 
 function nextPrev(n) {
@@ -121,14 +122,14 @@ function nextPrev(n) {
     submit();
     // document.getElementById("regForm").submit();
 
-    // document.getElementById("nextprevious").style.display = "none";
+    document.getElementById("nextprevious").style.display = "none";
     // document.getElementById("all-steps").style.display = "none";
     // document.getElementById("register").style.display = "none";
     // document.getElementById("text-message").style.display = "block";
     // document.getElementById("contnetcontainer").style.display = "none";
     // document.getElementById("largefooter").style.display = "none";
     // $(".backgroundImg").css("display", "none");
-    window.location.replace("./success.html");
+    
   }
   showTab(currentTab);
 }

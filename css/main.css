@@ -219,26 +219,32 @@ footer#largefooter2 {
 .img3 {
   display: block;
   position: relative;
-  top: 60px;
-  left: 70px;
+  top: 140px;
+  left: 30px;
 }
 .followgroup {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   margin-bottom: -300px;
   margin-top: -150px;
 }
 .img8 {
   position: absolute;
   z-index: 9;
-  top: 20%;
-  left: 4%;
+  top: 110px;
+  left: 80px;
 }
 .img7 {
   position: absolute;
   z-index: 9;
-  top: 40%;
-  left: 10%;
+  top: 195px;
+  left: 165px;
+}
+.instalg {
+  position: absolute;
+  top: 155px;
+  left: 513px;
+  z-index: 200;
 }
 .img9 {
   position: relative;
@@ -276,6 +282,18 @@ footer#largefooter2 {
 @media only screen and (max-width: 768px) {
   .exploregroupsm {
     display: block;
+    position: relative;
+    z-index: 200;
+  }
+  .instasm {
+    position: absolute;
+    text-align: end;
+    border-radius: 10px;
+    width: 114px;
+    height: 40px;
+    top: 152px;
+    left: 206px;
+    z-index: 200;
   }
   .contnetcontainer {
     height: auto;
